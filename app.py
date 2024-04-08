@@ -64,10 +64,10 @@ with app.test_request_context():
 
     @app.route('/hello/')
     @app.route('/hello/<name>')
-    def template(name=None):
+    def template(name=None)
         return render_template('hello.html', name=name)
 
-with app.test_request_context('/hello', method='POST'):
+with app.test_request_context('/hello', method='POST')
     # now you can do something with the request until the
     # end of the with block, such as basic assertions:
     assert request.path == '/hello'
